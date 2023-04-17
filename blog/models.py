@@ -22,7 +22,7 @@ class Article(models.Model):
     author=models.ManyToManyField(Author,related_name='articles',through='Publication')
 
     def __str__(self):
-        return self.name
+        return self.title[:10]
 
 
 class Publication(models.Model):
